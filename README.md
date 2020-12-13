@@ -276,7 +276,6 @@ Using our scheduler, the output should be something like:
     thread_local_object::foo: fiber id: 37, object id: 4
     thread_local_object::foo: fiber id: 53, object id: 4
     thread_local_object::foo: fiber id: 69, object id: 4
-{:class="language-shell"}
 
 
 However, if we were to drop in `boost::fibers::algo::shared_work`,
@@ -291,7 +290,6 @@ our output would look something like this:
     WARNING: Fiber migrated thread!
     WARNING: Fiber accessed wrong thread local!
     thread_local_object::foo: fiber id: 30, object id: 14
-{:class="language-shell"}
 
 
 > If using a different scheduler, you could create a reference to a thread local
